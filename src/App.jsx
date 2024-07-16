@@ -7,6 +7,8 @@ import Users from "./Users";
 import Sidebar from "./sideBar";
 import React from "react";
 import ListingPage from "./ListingPage";
+import CreateMerchant from "./CreateMerchant";
+import MerchantPage from "./MerchantPage";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route path="/" element={<SignUp/>} />
           <Route path="/page2" element={<Login/>} />
             <Route path="/page3" element={<ListingPage/>} />
+            <Route path="/page4" element={<MerchantPage/>} />
         </Routes>
   );
 }

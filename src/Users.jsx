@@ -14,20 +14,29 @@ function Users() {
 				console.log(error)
 			})
 	}, [])
+	const myFunction = (id) => {
+		console.log('delete button clicked')
+		axios.post('http://localhost:3001/Delete', {id})
+			.then((response) => {
+				console.log(response.data)
+				setUsers(users.filter((user) => user._id !== id))
+			})
+			.catch((error) => {
+				console.log(error)
+			})
+	}
 	return (
 		<>
 			<HeaderContainer>
-				<div >
+				<h1>
 					Users
-				</div>
-				<SubmitButton>+ Create new merchant</SubmitButton>
+				</h1>
 			</HeaderContainer>
 			<div>
 				<header>
 					<div>
 						{}
 					</div>
-					<button>+ Create new merchant</button>
 				</header>
 				<hr/>
 				<table>
@@ -48,6 +57,7 @@ function Users() {
 							<td>{user.email}</td>
 							<td>{user.name}</td>
 							<td>{user.phoneNumber}</td>
+							<td><img src= "./TashIcon.png" height={30} width={30} alt={'delete button'}  onClick={()=> myFunction(user._id)}/> </td>
 						</tr>
 					))}
 					</tbody>

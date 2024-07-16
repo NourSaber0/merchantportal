@@ -33,8 +33,6 @@ export const SubmitButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
 	);
-  
-
 	&:hover {
 		filter: brightness(1.03);
 	}
@@ -79,10 +77,11 @@ export const DisplayCard = styled.div`
   position: relative;
   overflow: hidden;
   margin: auto;
-  padding: 2%;
+  padding: 20px;
 `;
 export const SidebarContainer = styled.div`
   width: 250px;
+  align-items: center;
   background: linear-gradient( 90deg, #0C664A 10%, #043E2F 100%) center center;
   height: 100vh;
   display: flex;
@@ -90,12 +89,16 @@ export const SidebarContainer = styled.div`
   padding: 20px;
 `;
 
-export const NavItem = styled.div`
+export const NavItem = styled.button`
   color: #ffffff;
   padding: 10px;
+  font-size: 18px;
   cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: inherit;
   &:hover {
-    background-color: #007960;
+    background-color: #B68B26;
   }
 `;
 export const TableHeader = styled.thead`
