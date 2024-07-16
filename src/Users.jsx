@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import styles from "./index.css"
+import {FaTrash} from 'react-icons/fa'
 import {HeaderContainer, SubmitButton, TableHeader, TableRow} from "./common";
 
 
@@ -57,7 +58,7 @@ function Users() {
 							<td>{user.email}</td>
 							<td>{user.name}</td>
 							<td>{user.phoneNumber}</td>
-							<td><img src= "./TashIcon.png" height={30} width={30} alt={'delete button'}  onClick={()=> myFunction(user._id)}/> </td>
+							<td> <FaTrash onClick={()=> myFunction(user._id)}/> </td>
 						</tr>
 					))}
 					</tbody>
